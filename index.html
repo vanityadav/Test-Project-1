@@ -5,100 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progress Bar</title>
-    <link href="index.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" />
     <script src="index.js" defer></script>
   </head>
   <body>
     <div class="main-heading">Driving License Renewal</div>
     <div class="container">
-        <div class="bar">
-             <div class="progress"></div>
-             <div class="progress-bar"></div>
+      <div class="bar">
+        <div class="progress"></div>
+        <div class="progress-bar"></div>
+      </div>
+      <div class="heading">
+        <p>Let's get started!</p>
+        <p>Add your details (As per your registered records)</p>
+      </div>
+      <div class="form-container">
+        <div class="first-page">
+          <div class="entry">
+            <label class="label-heading">Name</label>
+            <input
+              id="username"
+              class="text-entry"
+              type="text"
+              placeholder="Enter Full Name"
+            />
+          </div>
+          <div class="entry">
+            <label class="label-heading">Nature of Driving License</label>
+            <div class="radio">
+              <div class="radio-entry">
+                <input type="radio" id="ndl1" name="natureof" />
+                <label for="ndl1">Private</label>
+              </div>
+              <div class="radio-entry">
+                <input type="radio" id="ndl2" name="natureof" />
+                <label for="ndl2">Commercial</label>
+              </div>
+            </div>
+          </div>
+          <div class="entry">
+            <label class="label-heading"
+              >Type of Previous Driving License</label
+            >
+            <div class="radio">
+              <div class="radio-entry">
+                <input type="radio" id="tdl1" name="typeof" />
+                <label for="tdl1">Paper Driving License</label>
+              </div>
+              <div class="radio-entry">
+                <input type="radio" id="tdl2" name="typeof" />
+                <label for="tdl2">Smart Driving License</label>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="heading">
-            <p>Let's get started!</p>
-            <p>Add your details (As per your registered records)</p>
-        </div>
-        <div class="form-container">
-            <form class="main-form"></form>
-                <div class="first-page">
-                    <div class="entry">
-                        <label class="label-heading">Name</label>
-                        <input id="username" class="text-entry" type="text" placeholder="Enter Full Name">
-                    </div>
-                    <div class="entry">
-                        <label class="label-heading">Nature of Driving License</label>
-                        <div class="radio">
-                            <div class="radio-entry">
-                                <input type="radio" id="ndl1" name="natureof">
-                                <label for="ndl1">Private</label>
-                            </div>
-                            <div class="radio-entry">
-                                <input type="radio" id="ndl2" name="natureof">
-                                <label for="ndl2">Commercial</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <label class="label-heading">Type of Previous Driving License</label>
-                        <div class="radio">
-                            <div class="radio-entry">
-                                <input type="radio" id="tdl1" name="typeof">
-                                <label for="tdl2">Paper Driving License</label>
-                            </div>
-                            <div class="radio-entry">
-                                <input type="radio" id="tdl2" name="typeof">
-                                <label for="tdl2">Smart Driving License</label>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
 
-                <div class="second-page">
-                    <div class="entry">
-                        <label class="label-heading">Place Where Driving License was Issued</label>
-                        <input class="text-entry" type="text" placeholder="Enter Place Name"> 
-                    </div>
-                    <div class="entry">
-                        <label class="label-heading" for="year">Issued Year of License</label>
-                           <select class="select-entry" name="typeofdl" id="typeofdl">
-                            <option value="none">Select Year</option>
-                            <option value="2010">2010</option>
-                            <option value="2011">2011</option>
-                            <option value="2012">2012</option>
-                            <option value="2013">2013</option>
-                            <option value="2014">2014</option>
-                            <option value="2015">2015</option>
-                            <option value="2016">2016</option>
-                            <option value="2017">2017</option>
-                            <option value="2018">2018</option>
-                            <option value="2019">2019</option>
-                            <option value="2020">2020</option>
-                            <option value="2021">2021</option>
-                            <option value="2022">2022</option>
-                        </select>
-                       
-                    </div>
-                    <div class="entry">
-                        <label class="label-heading" for="typeofdl">Type of Previous Driving License</label>
-                           <select class="select-entry" name="typeofdl" id="typeofdl">
-                            <option value="none">Select Category</option>
-                            <option value="LMV">LMV</option>
-                            <option value="MGV">MGV</option>
-                            <option value="HMV">HMV</option>
-                            <option value="HGMV">HGMV</option>
-                            <option value="Trailer">Trailer</option>
-                            <option value="HPMV/HTV">HPMV/HTV</option>
-                            <option value="MCWOG/FVG">MCWOG/FVG</option>
-                            <option value=" M/CYCL.WG"> M/CYCL.WG</option>
-                        </select>
-                    </div>
-                    <div class="button">
-                        <button class="goback">Back</button>        
-                    </div>
-                </div>
-            </form>
+        <div class="second-page">
+          <div class="entry">
+            <label class="label-heading"
+              >Place Where Driving License was Issued</label
+            >
+            <input
+              id="placename"
+              class="text-entry"
+              type="text"
+              placeholder="Enter Place Name"
+            />
+          </div>
+          <div class="entry">
+            <label class="label-heading" for="year"
+              >Issued Year of License</label
+            >
+            <select class="select-entry" name="typeofdl" id="typeofdl">
+              <option value="none">Select Year</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+            </select>
+          </div>
+          <div class="entry">
+            <label class="label-heading" for="typeofdl"
+              >Type of Previous Driving License</label
+            >
+            <select class="select-entry" name="typeofdl" id="typeofdl">
+              <option value="none">Select Category</option>
+              <option value="LMV">LMV</option>
+              <option value="MGV">MGV</option>
+              <option value="HMV">HMV</option>
+              <option value="HGMV">HGMV</option>
+              <option value="Trailer">Trailer</option>
+              <option value="HPMV/HTV">HPMV/HTV</option>
+              <option value="MCWOG/FVG">MCWOG/FVG</option>
+              <option value=" M/CYCL.WG">M/CYCL.WG</option>
+            </select>
+          </div>
+          <div class="button">
+            <button class="goback">Back</button>
+          </div>
         </div>
+      </div>
     </div>
   </body>
 </html>

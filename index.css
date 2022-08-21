@@ -66,10 +66,10 @@ body {
   top: 0;
   left: 0;
   background-color: red;
-  width: 4%;
+  width: 0;
   height: clamp(2px, 0.5rem, 20px);
   border-radius: 1rem;
-  transition: width 1s ease-out 0.2s;
+  transition: width 1s ease-out;
 }
 .progress {
   background-color: grey;
@@ -145,10 +145,11 @@ p:last-child {
 }
 
 .first-page {
-  display: none;
 }
 .second-page {
+  display: none;
 }
+
 .button {
   display: flex;
   justify-content: center;
@@ -183,6 +184,7 @@ p:last-child {
 .goback::before {
   content: " < ";
 }
+
 .select-entry {
   display: block;
   max-width: 100%;
