@@ -13,31 +13,35 @@ function openFirstPage() {
 }
 
 let enteredvalue = document.getElementById('username')
- enteredvalue.addEventListener("keyup",update)
+enteredvalue.addEventListener("keyup", () => {
+  if (enteredvalue.value.length >= 3) {
+    update("increase")
+  }
+  if (enteredvalue.value.length < 3) {
+    update("decrease")
+  }
+});
 
-// enteredvalue.addEventListener("keyup", function () {
-//      console.log('pressed')
-//     if (enteredvalue.value.length >= 3) {      
-//     progressBar.style.width = "20%"
-//     console.log('more 3')  
-//     }
-//     if (enteredvalue.value.length < 3) {
-//     progressBar.style.width = "16%"
-//     console.log('less 2')
-//         }
-// })
-    
+function update(action) {
+  var progressBar = document.querySelector(".progress-bar");
+  var width = 1;
+  if (width <= 100) {
+    switch (action) {
+      case "increase":
+        width += 16.6;
+        progressBar.style.width = width + "%";
+        break;
+      case "decrease":
+        width = width - 16.6;
+        progressBar.style.width = width + "%";
+        break;
 
-function update() {
-  var progressBar = document.querySelector('.progress-bar')  
-  var width = 1
-  var identity = setInterval(scene, 10)
-  function scene() {
-    if (width >= 100) {
-      clearInterval(identity)
-    } else {
-      width++
-      progressBar.style.width = width + '%'
+      default:
+        width = 1;
+        progressBar.style.width = width + "%";
+        break;
     }
   }
 }
+
+document.querySelector('#')
